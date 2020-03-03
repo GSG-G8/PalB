@@ -1,10 +1,12 @@
 require('env2')('./config.env');
 const path = require('path');
 const express = require('express');
+const compression = require('compression');
 
 const app = express();
 
 app.disable('x-powered-by');
+app.use(compression);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
