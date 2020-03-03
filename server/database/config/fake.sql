@@ -23,14 +23,14 @@ CREATE TABLE posts
 );
 
 INSERT INTO users
-    (name, email, password, userImage)
+    (name, email, password, avatar)
 VALUES
     ('hassan' , 'ahmed', '123', 'https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
     ('mohamed' , 'ali', '123', 'https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
     ('ali' , 'akdf', '123', 'https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
     ('ahsdf' , 'afews', '123', 'https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
 INSERT INTO posts
-    (post_title,userId,post_content,post_img)
+    (post_title,user_id,post_content,post_img)
 VALUES
     ( 'hash code in here', 1 ,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
     ( 'f*** you', 3 ,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
