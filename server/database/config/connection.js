@@ -14,5 +14,4 @@ const options = {
   connectionString: dbUrl,
   ssl: true,
 };
-
 module.exports = new Pool(options);
