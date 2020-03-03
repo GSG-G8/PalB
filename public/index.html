@@ -1,58 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PalB | APP</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login PalB</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-  <header class="head">
-    <div class="logo__head">
-      <h2 class="header_logo"> PALB APP | Be AWESOME </h2>
-    </div>
-    <div class="navbar">
-      <button class="signup__navbar"> Sign Up </button>
-    </div>
-  </header>
-   <main class="main">
-    <div class="login__main">
-    <div class="info__login">
-      <h3 class="title_info"> Log in | PALB</h3>
-      <img class="img_info" src="./images/login.png" alt="login">
-      <form class="form__login" action="/login_outher" method="post">
-        <input type="text" class="input_form" aria-label="user name" placeholder="User name">
-        <input type="password" class="input_form" aria-label="user password" placeholder="Password">
-        <button type="submit" class="submit__form"> Login </button> 
-        <a class="Register__form" id="register_form" href="#"> Register </a>
-        
-      </form>
-    </div>
-    </div>
-
-    <div class="signup__main">
-      <div class="info__signup">
-        <h3 class="title_info"> Register | PALB</h3>
-        <img class="img_info" src="./images/sinup.png" alt="login">
-        <form class="form__signup" action="/signup" method="post">
-          <input type="text" class="input_form" aria-label="user name" placeholder="User name">
-          <input type="password" class="input_form" aria-label="user password" placeholder="Password">
-          <input type="password" class="input_form" aria-label="user repassword" placeholder="Confirm password">
-          <input type="email" class="input_form" aria-label="email" placeholder="Email">
-          <input type="text" class="input_form" aria-label="avatar" placeholder="Avatar source">          
-          <button type="submit" class="submit__form"> Register </button>
-         </form>
+  <body>
+    <header class="head">
+      <div class="logo__head">
+        <h2 class="header_logo">PALB APP | Be AWESOME</h2>
+      </div>
+      <div class="navbar">
+        <button class="signup__navbar">Sign Up</button>
+      </div>
+    </header>
+    <main>
+      <section class="login">
+        <div class="container">
+          <div class="login__info">
+            <h3 class="login__title">Log in | PALB</h3>
+            <img class="login__img" src="./images/login.png" alt="avatar" />
+            <form class="login__form" action="/login_outher" method="post">
+              <input
+                type="text"
+                class="login__form__input"
+                aria-label="user name"
+                placeholder="User name"
+              />
+              <input
+                type="password"
+                class="login__form__input"
+                aria-label="user password"
+                placeholder="Password"
+              />
+              <button type="submit" class="login__form__btn">Login</button>
+              <a class="login__form__reg" id="register_form" href="#">
+                Register
+              </a>
+            </form>
+          </div>
         </div>
-    </div>
+      </section>
+      <section class="signup">
+        <div class="container">
+          <div class="signup__info">
+            <h3 class="signup__title">Register | PALB</h3>
+            <img class="signup__img" src="./images/sinup.png" alt="signup" />
+            <form class="signup__form" action="/signup" method="post">
+              <input
+                type="text"
+                class="signup__form__input"
+                aria-label="user name"
+                placeholder="User name"
+              />
+              <input
+                type="password"
+                class="signup__form__input"
+                aria-label="user password"
+                placeholder="Password"
+              />
+              <input
+                type="password"
+                class="signup__form__input"
+                aria-label="user repassword"
+                placeholder="Confirm password"
+              />
+              <input
+                type="email"
+                class="signup__form__input"
+                aria-label="email"
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                class="signup__form__input"
+                aria-label="avatar"
+                placeholder="Avatar source"
+              />
+              <button type="submit" class="signup__form__btn">Register</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  </main>
-
-
-  <footer class="footer">
-    <h4 class="h4_footer"> Copyright © | PALB 2020 </h4>
-  </footer>
-</body>
-
+    <footer class="footer">
+      <h4 class="h4_footer">Copyright &copy; | PALB 2020</h4>
+    </footer>
+  </body>
 </html>
