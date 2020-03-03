@@ -12,14 +12,7 @@ app.use(compression());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(join(__dirname, '..', 'public')));
 
-
 app.set('port', process.env.PORT || 5595);
-
-app.get('/alaa', (req, res, next) => {
-  res.sendFile(join(__dirname, '..', 'public', 'index.html'), (err) => {
-    if (err) { console.log(err); next(err); } else { console.log('123'); }
-  });
-});
 
 app.use(router);
 
