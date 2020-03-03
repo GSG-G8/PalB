@@ -33,16 +33,16 @@ INSERT INTO posts
     (post_title,user_id,post_content,post_img)
 VALUES
     ( 'hash code in here', 1 ,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
-    ( 'f*** you', 3 ,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
+    ( ' you', 3 ,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
     ( 'why me', 4,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
     ( 'hash code in here', 2,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
-    ( 'f*** you', 2,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
+    ( ' you', 2,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
     ( 'why me', 4,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
     ( 'hash code in here', 3,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
-    ( 'f*** you', 1,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
+    ( ' you', 1,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
     ( 'why me', 4,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
     ( 'hash code in here', 2,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
-    ( 'f*** you', 3,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
+    ( ' you', 3,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
     ( 'why me', 2,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ),
     ( 'no thing in here', 1,'where you are now ???','https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' );
 
