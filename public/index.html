@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login PalB</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header class="head">
+    <div class="logo__head">
+      <h2 class="header_logo"> PALB APP | Be AWESOME </h2>
+    </div>
+    <div class="navbar">
+      <button class="signup__navbar"> Sign Up </button>
+    </div>
+  </header>
+   <main class="main">
+    <div class="login__main">
+    <div class="info__login">
+      <h3 class="title_info"> Log in | PALB</h3>
+      <img class="img_info" src="./images/login.png" alt="login">
+      <form class="form__login" action="/login_outher" method="post">
+        <input type="text" class="input_form" aria-label="user name" placeholder="User name">
+        <input type="password" class="input_form" aria-label="user password" placeholder="Password">
+        <button type="submit" class="submit__form"> Login </button> 
+        <a class="Register__form" id="register_form" href="#"> Register </a>
+        
+      </form>
+    </div>
+    </div>
+
+    <div class="signup__main">
+      <div class="info__signup">
+        <h3 class="title_info"> Register | PALB</h3>
+        <img class="img_info" src="./images/sinup.png" alt="login">
+        <form class="form__signup" action="/signup" method="post">
+          <input type="text" class="input_form" aria-label="user name" placeholder="User name">
+          <input type="password" class="input_form" aria-label="user password" placeholder="Password">
+          <input type="password" class="input_form" aria-label="user repassword" placeholder="Confirm password">
+          <input type="email" class="input_form" aria-label="email" placeholder="Email">
+          <input type="text" class="input_form" aria-label="avatar" placeholder="Avatar source">          
+          <button type="submit" class="submit__form"> Register </button>
+         </form>
+        </div>
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+    <h4 class="h4_footer"> Copyright © | PALB 2020 </h4>
+  </footer>
+</body>
+
+</html>
