@@ -19,7 +19,7 @@ const getPost = (req, res, next) => getPosts().then((data) => {
 const getUsers = (req, res, next) => {
   const schema = Joi.object().keys({
     email: Joi.string().email().required(),
-    password: Joi.string().regex(/^[0-9]{3,}$/).required(),
+    password: Joi.string().regex(/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)^\w{6,}$/).required(),
   });
   const { error, value } = schema.validate(req.body);
   if (error) {
