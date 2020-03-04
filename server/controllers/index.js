@@ -2,7 +2,7 @@ const { join } = require('path');
 const Joi = require('@hapi/joi');
 
 const getPosts = require('../database/queries/getData');
-const getUser = require('../database/queries/getUser');
+const { getUser, checkUser } = require('../database/queries/getUser');
 const addPosts = require('../database/queries/postData');
 const addUser = require('../database/queries/postUser');
 
@@ -46,7 +46,12 @@ const addUsers = (req, res, next) => {
   if (error) {
     res.send(error.message);
   } else {
-    addUser(value).then(() => res.redirect('/')).catch((err) => { next(err); });
+    checkUser(value).then(({ rows }) => {
+      if (rows.length !== 0) res.send('Email is already exist');
+      else {
+        addUser(value).then(() => res.redirect('/')).catch((err) => { next(err); });
+      }
+    });
   }
 };
 
