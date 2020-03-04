@@ -4,95 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PalB | APP</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
 
-  <body>
-    <header class="head">
-      <div class="head__logo">
-        <h2 class="head__logo__h2">PALB APP | Be AWESOME</h2>
-      </div>
-      <div class="head__navbar">
-        <button class="head__navbar__signup">Sign Up</button>
-      </div>
-    </header>
-    <main>
+  <body class="body">
       <section class="login">
-        <div class="container">
-          <div class="login__info">
-            <h3 class="login__title">Log in | PALB</h3>
+            <h2 class="login__title">Log in to PalB</h2>
             <img class="login__img" src="./images/login.png" alt="avatar" />
             <form class="login__form" action="/login" method="post">
               <input
                 type="text"
-                class="login__form__input"
+                class="form__input"
                 aria-label="user name"
                 placeholder="User name"
               />
               <input
                 type="password"
-                class="login__form__input"
+                class="form__input"
                 aria-label="user password"
                 placeholder="Password"
               />
-              <button type="submit" class="login__form__btn">Login</button>
-              <a class="login__form__reg" id="register_form" href="#">
-                Register
-              </a>
+              <button type="submit" class="form__btn">Login</button>
             </form>
-          </div>
-        </div>
+          
+      </section>
+      <section class="go-to-signUp">
+        <span class="Hello">Hello, Friend!</span>
+        <span class="details">Enter your personal details and start journey withe us </span>
+        <button class="go-login">SIGN UP</button>
       </section>
       <section class="signup">
-        <div class="container">
-          <div class="signup__info">
             <h3 class="signup__title">Register | PALB</h3>
             <img class="signup__img" src="./images/sinup.png" alt="signup" />
             <form class="signup__form" action="/signup" method="post">
               <input
                 type="text"
-                class="signup__form__input"
+                class="form__input"
                 name="name"
                 aria-label="user name"
                 placeholder="User name"
               />
               <input
                 type="password"
-                class="signup__form__input"
+                class="form__input"
                 name="password"
                 aria-label="user password"
                 placeholder="Password"
               />
               <input
                 type="password"
-                class="signup__form__input"
+                class="form__input"
                 name="confirm-password"
                 aria-label="user repassword"
                 placeholder="Confirm password"
               />
               <input
                 type="email"
-                class="signup__form__input"
+                class="form__input"
                 name="email"
                 aria-label="email"
                 placeholder="Email"
               />
               <input
                 type="text"
-                class="signup__form__input"
+                class="form__input"
                 name="avatar"
                 aria-label="avatar"
                 placeholder="Avatar source"
               />
-              <button type="submit" class="signup__form__btn">Register</button>
+              <button type="submit" class="form__btn">Register</button>
             </form>
-          </div>
-        </div>
       </section>
-    </main>
-
-    <footer class="footer">
-      <h4 class="footer__h4">Copyright &copy; | PALB 2020</h4>
-    </footer>
+      <section class="go-to-login">
+        <span class="Hello">Welcome Back!</span>
+        <span class="details">Enter your personal details and start journey withe us </span>
+        <button class="go-signUp">LOGIN</button>
+      </section>
+      <script src="./script/animation.js"></script>
   </body>
 </html>

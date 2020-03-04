@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  position: relative;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 100vh;
+}
+.login{
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20%;
+}
+.login__form,
+.signup__form{
+margin-top: 60px;
+display: flex;
+flex-direction: column;
+}
+.signup {
+  grid-column: 2;
+  display: none; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20%;
+}
+.login__img,
+.signup__img{
+  width: 100px;
+  height: 100px;
+}
+.form__btn{
+  width: 150px;
+  font-size: 25px;
+  border-radius: 50px;
+  padding: 10px 10px;
+  margin: 15px;
+  align-self: center;
+  background-color: rgb(76, 181, 175);
+  color: white;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+.form__input {
+  background-color: rgb(231, 231, 231);
+  height: 35px;
+  width: 300px;
+  padding: 5px 20px;
+  margin: 5px;
+  border: none;
+  color: black;
+  font-size: 20px;
+  outline: none;
+}
+.form__btn:hover{
+  background-color: #7ACED8;
+}
+.go-to-signUp{
+  grid-column: 2;
+  background-image: linear-gradient(#7ACED8,rgb(124, 229, 241)) ;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50%;
+}
+.Hello{
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+  font-family: monospace;
+}
+.details{
+  width: 80%;
+  color: white;
+  font-size: 20px;
+  font-weight: 350;
+  align-self: center;
+  margin: 20px;
+  padding: 20px;
+}
+.go-login{
+  width: 150px;
+  font-size: 25px;
+  border-radius: 50px;
+  padding: 10px 10px;
+  margin: 50px;
+  align-self: center;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  outline: none;
+}
+.go-login:hover{
+  background-color: #7ACED8;
+}
+.go-to-login{
+  grid-column: 2;
+  background-image: linear-gradient(#7ACED8,rgb(124, 229, 241)) ;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50%;
+}
+.go-signUp{
+  width: 150px;
+  font-size: 25px;
+  border-radius: 50px;
+  padding: 10px 10px;
+  margin: 50px;
+  align-self: center;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  outline: none;
+}
+.go-signUp:hover{
+  background-color: #7ACED8;
+}
