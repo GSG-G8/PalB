@@ -11,37 +11,80 @@
       <span class="header__logo">PalB</span>
     </header>
     <section class="users">
-        <span class="users__head">people you may know</span>
+      <span class="users__head">people you may know</span>
       <div class="users__container">
-        <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="" class="content__avatar" />
+        <img
+          src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
+          alt=""
+          class="content__avatar"
+        />
+        <span class="content__name">user</span>
+      </div>
+      <div class="users__container">
+        <img
+          src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
+          alt=""
+          class="content__avatar"
+        />
         <span class="content__name">user</span>
       </div>
     </section>
     <section class="posts">
-        <form action="/createPost" method="post" class="posts__form">
-              <input type="text" class="posts_title">
-              <input type="text" class="posts__content">
-              <input type="text" class="posts__image">
-              <button type="submit">send</button>
-        </form>
-    <article class="post">
-        <div class="users__container">
-            <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="" class="content__avatar" />
+      <form action="/createPost" method="post" class="posts__form">
+        <input
+          type="text"
+          class="posts__title"
+          name="post_title"
+          placeholder="post title"
+          required
+        />
+        <input
+          type="url"
+          class="posts__image"
+          name="post_img"
+          placeholder="post image"
+          required
+        />
+        <textarea
+          class="posts__content"
+          name="post_content"
+          placeholder="post content"
+          required
+        >
+        </textarea>
+        <button type="submit" class="posts__send">send</button>
+      </form>
+      <article class="post">
+        <div class="post__container">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
+            alt=""
+            class="content__avatar"
+          />
+          <div class="container__name">
             <span class="content__name">user</span>
             <span class="post__date">20/2/2020</span>
           </div>
-          <span class="post__title">title</span>
-          <img src="" alt="image" class="post__image">
-          <span class="post_content">post_content</span>
-    </article>
+        </div>
+        <span class="post__title">title</span>
+        <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="image" class="post__image" />
+        <span class="post_content">post_content</span>
+      </article>
     </section>
     <section class="profile">
-        <span class="profile__head"> your profile</span>
-        <div class="users__container">
-            <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="" class="content__avatar" />
-            <span class="content__name">user</span>
-          </div>
+      <div class="profile__container">
+        <img
+          src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
+          alt=""
+          class="profile__avatar"
+        />
+        <span class="container__name">user</span>
+        <span class="container__email">@user</span>
+        <button class="profile__log-out">log out</button>
+      </div>
     </section>
     <footer class="footer">Copyright &copy; | PALB 2020</footer>
+    <script src="./script/dom.js"></script>
+    <script src="./script/fetch.js"></script>
   </body>
 </html>
