@@ -1,5 +1,5 @@
 const connection = require('../config/connection');
 
-const getUser = () => connection.query('select * from users');
+const getUser = (value) => connection.query('select * from users where name = $1 and password = $2', [value.name, value.password]);
 
 module.exports = getUser;

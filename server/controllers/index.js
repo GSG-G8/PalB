@@ -16,11 +16,19 @@ const getPost = (req, res, next) => getPosts().then((data) => {
   next(err);
 });
 
-const getUsers = (req, res, next) => getUser().then((data) => {
-  res.json(data.rows);
-}).catch((err) => {
-  next(err);
-});
+const getUsers = (req, res, next) => {
+  const schema = Joi.object().keys({
+    name: Joi.string().alphanum().min(3).max(20)
+      .required(),
+    password: Joi.string().regex(/^[0-9]{3,}$/).required(),
+  });
+  const { error, value } = schema.validate(req.body);
+  if (error) {
+    res.send(error.message);
+  } else {
+    getUser(value).then((data) => { res.json(data.rows); }).catch((err) => { next(err); });
+  }
+};
 
 const addPost = (req, res, next) => addPosts(req.body).then(() => res.redirect('/home')).catch((err) => {
   next(err);
