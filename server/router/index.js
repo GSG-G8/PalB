@@ -6,10 +6,10 @@ const {
 } = require('../controllers/index');
 
 routes.get('/home', home);
-routes.get('/users', getUsers);
 routes.get('/posts', getPost);
-routes.post('/login', addUsers);
-routes.post('/signup', addPost);
+routes.post('/login', getUsers);
+routes.post('/signup', addUsers);
+routes.post('/createPost', addPost);
 
 
 module.exports = routes;

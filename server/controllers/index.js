@@ -1,8 +1,8 @@
 const { join } = require('path');
-const { getPosts } = require('../database/queries/getData');
-const { getUser } = require('../database/queries/getUser');
-const { addPosts } = require('../database/queries/postData');
-const { addUser } = require('../database/queries/postUser');
+const getPosts = require('../database/queries/getData');
+const getUser = require('../database/queries/getUser');
+const addPosts = require('../database/queries/postData');
+const addUser = require('../database/queries/postUser');
 
 
 const home = (req, res) => res.sendFile(join(__dirname, '..', '..', 'public', 'home.html'));
@@ -20,17 +20,15 @@ const getUsers = (req, res, next) => getUser().then((data) => {
   next(err);
 });
 
-const addPost = (req, res, next) => addPosts(req.body).then((data) => {
-  res.json(data.rows[0]);
-}).catch((err) => {
+const addPost = (req, res, next) => addPosts(req.body).then(() => res.redirect('/home')).catch((err) => {
   next(err);
 });
 
-const addUsers = (req, res, next) => addUser(req.body).then((data) => {
-  res.json(data.rows[0]);
-}).catch((err) => {
-  next(err);
-});
+const addUsers = (req, res, next) => {
+  addUser(req.body).then(() => res.redirect('/')).catch((err) => {
+    next(err);
+  });
+};
 
 module.exports = {
   home,
