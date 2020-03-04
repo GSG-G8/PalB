@@ -5,8 +5,8 @@ const {
 } = require('../controllers/index');
 
 routes.get('/home', home);
-routes.get('/posts', getPost);
-routes.use('/login', getUsers);
+routes.post('/posts', getPost);
+routes.post('/login', getUsers);
 routes.post('/signup', addUsers);
 routes.post('/createPost', addPost);
 
