@@ -186,11 +186,6 @@ font-family: fantasy;
     width: 100%;
 }
 
-.login__img,
-.signup__img {
-    width: 100px;
-    height: 100px;
-}
 @media (max-width:750px){
     .body{
         grid-template-columns: 5% 90% 5%;
