@@ -193,26 +193,18 @@ font-family: fantasy;
 }
 @media (max-width:750px){
     .body{
-        grid-template-columns: 5% 90% 5%;
-        grid-row: 10% 80%;
+        grid-template-columns:100%;
     }
 
     .profile{
       display: none;
     }
     .posts{
-        grid-column-start: 2;
-        grid-row: 2;
+      grid-column-start: 1;
     }
     .users{
-        grid-row-start: 1;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        margin: 20px;
-        border-radius: 15px;
-        padding-left: 10px;
-    }
+     display: none; 
+   }
     .users__head{
         display: none;
     }

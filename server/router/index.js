@@ -1,4 +1,3 @@
-
 const routes = require('express').Router();
 
 const {
@@ -6,7 +5,7 @@ const {
 } = require('../controllers/index');
 
 routes.get('/home', home);
-routes.get('/posts', getPost);
+routes.post('/posts', getPost);
 routes.post('/login', getUsers);
 routes.post('/signup', addUsers);
 routes.post('/createPost', addPost);
