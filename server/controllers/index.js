@@ -25,7 +25,9 @@ const getUsers = (req, res, next) => {
   if (error) {
     res.send(error.message);
   } else {
-    getUser(value).then((data) => { res.json(data.rows); }).catch((err) => { next(err); });
+    getUser(value).then(({ rows }) => {
+      res.cookie('name', rows[0].name).redirect('/');
+    }).catch((err) => { next(err); });
   }
 };
 
@@ -38,7 +40,7 @@ const addUsers = (req, res, next) => {
     name: Joi.string().alphanum().min(3).max(20)
       .required(),
     email: Joi.string().email().required(),
-    password: Joi.string().regex(/^[0-9]{3,}$/).required(),
+    password: Joi.string().regex(/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)^\w{6,}$/).required(),
     confirm: Joi.ref('password'),
     avatar: Joi.string().required(),
   });
