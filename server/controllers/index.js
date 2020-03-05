@@ -7,7 +7,13 @@ const addPosts = require('../database/queries/postData');
 const addUser = require('../database/queries/postUser');
 
 
-const home = (req, res) => res.sendFile(join(__dirname, '..', '..', 'public', 'home.html'));
+const home = (req, res) => {
+  if (req.cookies.name) {
+    res.sendFile(join(__dirname, '..', '..', 'public', 'home.html'));
+  } else {
+    res.send('UnAuthorized');
+  }
+};
 
 
 const getPost = (req, res, next) => getPosts().then((data) => {
@@ -23,10 +29,11 @@ const getUsers = (req, res, next) => {
   });
   const { error, value } = schema.validate(req.body);
   if (error) {
-    res.send(error.message);
+    res.send('Please check the input values');
   } else {
     getUser(value).then(({ rows }) => {
-      res.cookie('name', rows[0].name).redirect('/');
+      // console.log(value);
+      res.cookie('name', rows[0].name).redirect('/home');
     }).catch((err) => { next(err); });
   }
 };
@@ -50,17 +57,21 @@ const addUsers = (req, res, next) => {
   });
   const { error, value } = schema.validate(req.body);
   if (error) {
-    res.send(error.message);
+    res.send('Please check the input values');
   } else {
     checkUser(value).then(({ rows }) => {
       if (rows.length !== 0) res.send('Email is already exist');
       else {
-        addUser(value).then(() => res.redirect('/')).catch((err) => { next(err); });
+        addUser(value).then(({ rows }) => {
+          res.cookie('name', rows[0].name).redirect('/home');
+        }).catch((err) => { next(err); });
       }
     });
   }
 };
-
+const logout = (req, res) => {
+  res.clearCookie('name').redirect('/');
+};
 module.exports = {
   home,
   getPost,
@@ -68,4 +79,5 @@ module.exports = {
   addPost,
   addUsers,
   getAllUsers,
+  logout,
 };
